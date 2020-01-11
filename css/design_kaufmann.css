@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Asap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    text-align: center;
+    font-family: Asap;
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+}
+body {
+    background: url('../img/bg.jpg');
+}
+#verlauf {
+    margin-left: 60px;
+    margin-right: 10px;
+    font-family: Asap;
+    font-size: 20px;
+}
+#hist-btn {
+
+    background: white;
+    margin: 10px;
+    border: none;
+    box-shadow: 0 0 30px #b2b5b8;
+    border-radius: 20px;
+    width: 125px;
+    height: 30px;
+    outline: none;
+    font-family: Asap;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 500ms;
+}
+#hist-btn:hover {
+    transform: translate(0, -5px);
+}
+#history {
+    margin-left: 60px;
+    font-family: Asap;
+    font-weight: bold;
+    font-size: 15px;
+}
+#title {
+ 
+    font-size: 30px;
+    text-decoration: none;
+    color: #054437;
+    transition: 500ms;
+}
+#help {
+    padding: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: #054437;
+    transition: 500ms;
+}
+#toggle-box {
+    margin: 50px;
+}
+#theme-btn {
+    border: solid rgb(230, 230, 230);
+    width: 150px;
+    height: 27px;
+    background: white;
+    cursor: pointer;
+    font-family: Asap;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 500ms;
+    outline: none;
+}
+#calc-box {
+    width: 370px;
+    margin-TOP: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px #b2b5b8;
+    background: #f1f7f8;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    cursor: pointer;
+    transition: 250ms;
+}
+.field {
+    width: 370px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: Asap;
+    text-align: center;
+    font-size: 25px;
+    background: linear-gradient(to left, #1abc9c, #2ecc71);
+    transition: 250ms;
+}
+.btn {
+    border: none;
+    width: 90px;
+    height: 70px;
+    outline: none;
+    font-family: Asap;
+    font-size: 22px;
+    border-radius: 35px;
+    background: #f1f7f8;
+    transition: 250ms;
+    cursor: pointer;
+}
+.equal {
+    border: none;
+    width: 90px;
+    height: 70px;
+    font-family: Asap;
+    font-size: 35px;
+    color: white;
+    outline: none;
+    background: linear-gradient(#1abc9c, #2ecc71);
+    border-bottom-right-radius: 35px;
+    cursor: pointer;
+    transition: 250ms;
+}
+.btn:active {
+    font-size: 15px;
+}
+.equal:active {
+    font-size: 20px;
+}
+

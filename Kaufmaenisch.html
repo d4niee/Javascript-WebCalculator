@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kaufmänisch</title>
+        <meta name="generator" content="VS Code">
+        <meta name="author" content="Daniel Lambrecht">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+	    <meta http-equiv="content-style-type" content="text/css">
+        <meta http-equiv="expires" content="0">
+        <link rel="stylesheet" href="./css/design_kaufmann.css">
+        <link rel="icon" href="./img/icon.png">
+    </head>
+    <body>
+        <header>
+            <header>
+                <a id="title" href="./Wissenschaftlich.html">Kaufm&auml;nischer Rechner 📈</a><br><br>
+                <a id="help" href="./html/help.html">❓ Hilfe ❓</a>
+                <input id="theme-btn" onclick="changeTheme(7, 4)" type="button" value="☀️ light theme">
+            </header>
+        </header>
+        <table>
+            <tr>
+                <td><p id="verlauf">Verlauf🕘</p></td>
+                <td><input id="hist-btn" onclick="clear_history()" type="button" value="Verlauf löschen"></td>
+            </tr>
+        </table>
+        <p id="history"></p>
+        <div id="calc-box">
+            <form name="formular">
+                    <input class="field" name="result" type="text" maxlength="22" 
+                    style="border-top-left-radius: 35px;border-top-right-radius:35px;"><br>
+                    <input class="field" name="save" type="text" readonly="readonly">
+                    
+                <table>
+                    <tr class="row">
+                        <td><input class="btn" onclick="mem()" onmouseover="onOver(2)" onmouseout="onDown(2)" type="button" value="mem"></td>
+                        <td><input class="btn" onclick="back()" onmouseover="onOver(3)" onmouseout="onDown(3)" type="button" value="get"></td>
+                        <td><input class="btn" onclick="del()" onmouseover="onOver(4)" onmouseout="onDown(4)" type="button" value="C"></td>
+                        <td><input class="btn" onclick="pow_xy()" onmouseover="onOver(5)" onmouseout="onDown(5)" type="button" value="x^y"></td>
+                    </tr>
+                    <tr class="row">
+                        <td><input class="btn" onclick="square()" onmouseover="onOver(6)" onmouseout="onDown(6)" type="button" value="x²"></td>
+                        <td><input class="btn" onclick="reset()" onmouseover="onOver(7)" onmouseout="onDown(7)" type="button" value="reset"></td>
+                        <td><input class="btn" onclick="one_back()" onmouseover="onOver(8)" onmouseout="onDown(8)" type="button" value="&larr;"></td>
+                        <td><input class="btn" onclick="log()" onmouseover="onOver(9)" onmouseout="onDown(9)" type="button" value="log"></td>
+                    </tr>
+                    <tr class="row">
+                        <td><input class="btn" onclick="sigma()" onmouseover="onOver(10)" onmouseout="onDown(10)" type="button" value="sigma"></td>
+                        <td><input class="btn" onclick="average()" onmouseover="onOver(11)" onmouseout="onDown(11)" type="button" value="Ø"></td>
+                        <td><input class="btn" onclick="root()" onmouseover="onOver(12)" onmouseout="onDown(12)" type="button" value="√"></td>
+                        <td><input class="btn" onclick="insert('/')" onmouseover="onOver(13)" onmouseout="onDown(13)" type="button" value="÷"></td>
+                    </tr>
+                    <tr class="row">
+                        <td><input class="btn" onclick="insert(7)" onmouseover="onOver(14)" onmouseout="onDown(14)" type="button" value="7"></td>
+                        <td><input class="btn" onclick="insert(8)" onmouseover="onOver(15)" onmouseout="onDown(15)" type="button" value="8"></td>
+                        <td><input class="btn" onclick="insert(9)" onmouseover="onOver(16)" onmouseout="onDown(16)" type="button" value="9"></td>
+                        <td><input class="btn" onclick="insert('*')" onmouseover="onOver(17)" onmouseout="onDown(17)" type="button" value="×"></td>
+                    </tr>
+                    <tr class="row">
+                        <td><input class="btn" onclick="insert(4)" onmouseover="onOver(18)" onmouseout="onDown(18)" type="button" value="4"></td>
+                        <td><input class="btn" onclick="insert(5)" onmouseover="onOver(19)" onmouseout="onDown(19)"type="button" value="5"></td>
+                        <td><input class="btn" onclick="insert(6)" onmouseover="onOver(20)" onmouseout="onDown(20)" type="button" value="6"></td>
+                        <td><input class="btn" onclick="insert('-')" onmouseover="onOver(21)" onmouseout="onDown(21)" type="button" value="-"></td>
+                    </tr>
+                    <tr class="row">
+                        <td><input class="btn" onclick="insert(1)" onmouseover="onOver(22)" onmouseout="onDown(22)" type="button" value="1"></td>
+                        <td><input class="btn" onclick="insert(2)" onmouseover="onOver(23)" onmouseout="onDown(23)" type="button" value="2"></td>
+                        <td><input class="btn" onclick="insert(3)" onmouseover="onOver(24)" onmouseout="onDown(24)" type="button" value="3"></td>
+                        <td><input class="btn" onclick="insert('+')" onmouseover="onOver(25)" onmouseout="onDown(25)" type="button" value="+"></td>
+                    </tr>
+                    <tr class="row">
+                        <td><input class="btn" onclick="insert(0)" onmouseover="onOver(26)" onmouseout="onDown(26)" type="button" value="0"></td>
+                        <td><input class="btn" onclick="insert('.')" onmouseover="onOver(27)" onmouseout="onDown(27)" type="button" value="."></td>
+                        <td><input class="btn" onclick="faculty()" onmouseover="onOver(28)" onmouseout="onDown(28)" type="button" value="n!"></td>
+                        <td><input class="equal" onclick="calculate()" onmouseover="onOver(29, true)" onmouseout="onDown(29, true)" type="button" value="="></td>
+                    </tr>
+                </table>
+            </form>
+            <script src="./script/app.js"></script>
+        </div>
+    </body>
+</html>
